@@ -1,4 +1,4 @@
-
+//Dynamic programming technique to find sum of subsets 
 
 import java.util.Scanner;
 public class SumOfsubset
