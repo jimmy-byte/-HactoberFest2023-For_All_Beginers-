@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+
+
+<style>
+    
+#cont{
+height:270px;
+width:270px;
+border-radius:50%;
+background-color:#000;
+position:absolute;
+overflow:hidden;
+left:0;right:0;top:0;bottom:0;
+margin:auto;
+box-shadow:0 0 9px 5px red;
+}
+    
+#hour{
+    
+height:60px;
+width:5px;
+background-color:white;
+position:absolute ;
+top:-60px;
+left:0;
+right:0;
+bottom:0;
+margin:auto;
+transform:rotate(90deg);
+transform-origin: bottom;
+box-shadow:0 0 9px 5px orange;
+border-radius:30%;
+}
+#min{
+height:80px;
+width:5px;
+background-color:white;
+position:absolute ;
+top:-80px;
+left:0;
+right:0;
+bottom:0;
+margin:auto;
+transform:rotate(0deg);
+transform-origin: bottom;
+box-shadow:0 0 9px 5px orange;
+border-radius:30%;
+opacity:1;
+}
+#sec{
+height:110px;
+width:5px;
+background-color:white;
+position:absolute ;
+top:-110px;
+left:0;
+right:0;
+bottom:0;
+margin:auto;
+transform:rotate(-45deg);
+box-shadow:0 0 9px 5px orange;
+transform-origin:bottom;
+border-radius:30%;
+}
+#cir{
+height:15px;
+width:15px;
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+margin:auto;
+background-color:white;
+box-shadow:0 0 9px 5px deeppink;
+border-radius:50%;
+opacity:1;
+}
+h{
+position:absolute ;
+height:20px;
+width:5px;
+margin:auto;
+background:white;
+box-shadow:0 0 9px 5px deeppink;
+}
+#twelve{
+right:0;
+left:0;
+top:0;
+}
+#six{
+right:0;
+left:0;
+bottom:0;
+}
+#nine{
+top:0;
+bottom:0;
+left:0;
+height:5px;
+width:20px;
+}
+#three{
+top:0;
+bottom:0;
+right:0;
+height:5px;
+width:20px;
+}
+</head>
+</style>
+    
+<body bgcolor="yellow">
+<div id="cont">
+<h id="twelve"></h>
+<h id="six"></h>
+<h id="nine"></h>
+<h id="three"></h>
+<div id="hour"></div>
+<div id="min"></div>
+<div id="sec"></div>
+<div id="cir"></div>
+</div>
+        
+    
+    
+<script type="text/javascript">
+function setDeg()
+    {
+             var date= new Date();
+             var hours = ( date.getHours() + date.getMinutes()/60) / 12 * 360;
+             var mins = date.getMinutes() / 60 * 360;
+             var secs = ( date.getSeconds() + date.getMilliseconds()/1000) /60 * 360;
+             document.getElementById('hour').style.transform = 'rotate('+hours+'deg)';
+             document.getElementById('min').style.transform = 'rotate('+mins+'deg)';
+             document.getElementById('sec').style.transform = 'rotate('+secs+'deg)';
+}
+             setInterval(setDeg,1);
+</script>
+
+</body>
+</html>
