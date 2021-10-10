@@ -3,42 +3,44 @@
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <!--provides a full-width container that can expand or collapse based on the size of viewport-->
-<div class="container-fluid">
+
+<body style="background-color: aqua;">
+<div class="container-fluid" >
     <div class="row">
-        <div class="col-md-2 col-sm-12 col-xs-12">
+        <div class="col-md-2 col-sm-12 col-xs-12" >
             <nav id="navbar">
                 <h3>Technical Documentation</h3>
                 <!--content stacking for smaller screens-->
                 <ul class="nav nav-pills nav-stacked">
                  <!--internal linking to the respective sections-->
-                    <a class="nav-link" href="#Introduction" rel="internal">
-                        <li>Introduction</li>
+                    <a class="nav-link" href="#Introduction" rel="internal" >
+                        <li><b>Introduction</b></li>
                     </a>
                     <a class="nav-link" href="#What_you_should_already_know" rel="internal">
-                        <li>What you should already know</li>
+                        <li><b>you should already know</b> </li>
                     </a>
                     <a class="nav-link" href="#About_Topic" rel="internal">
-                        <li>About the topic</li>
+                        <li><b>About the topic</b></li>
                     </a>
                     <a class="nav-link" href="#Topic_1" rel="internal">
-                        <li>Topic 1</li>
+                        <li><b>Topic 1</b></li>
                     </a>
                     <a class="nav-link" href="#Topic_2" rel="internal">
-                        <li>Topic 2</li>
+                        <li><b>Topic 2</b></li>
                     </a>
                  </ul>
             </nav>
         </div>
-        <div class="col-md-10 col-sm-12 col-xs-12">
+        <div class="col-md-10 col-sm-12 col-xs-12" style="background-color: royalblue;">
             <main id="main-doc">
-                <section class="main-section" id="Introduction" >
+                <section class="main-section" id="Introduction" style="background-color: yellow;">
                  <!--basic styling for the headings, better practice to do the same in a css file as the styling is same for all headers-->
                     <h3 style = "background: black; color: white">Introduction</h3>
                     <article>
                     <p>Some content about the main topic, for example Java documentation introduction about the language
                         </article>
                 </section>
-                <section class="main-section" id="What_you_should_already_know">
+                <section class="main-section" id="What_you_should_already_know" style="background-color: yellowgreen;">
                     <h3 style = "background: black; color: white">What you should already know</h3>
                     <article>
                         <p>Background information before getting into the topic:</p>
@@ -49,7 +51,7 @@
                         <p>Any other content to be covered before learning this topic</p>
                         </artice>
                 </section>
-                <section class="main-section" id="About_Topic">
+                <section class="main-section" id="About_Topic" style="background-color: rgb(255, 0, 106);">
                     <h3 style = "background: black; color: white">About topic</h3>
                     <article>
                         <p>More lines about the topic. For example, how the basic functionality works, features etc...</p>
@@ -61,7 +63,7 @@
                         </p>
                     </article>
                 </section>
-                <section class="main-section" id="Topic_1">
+                <section class="main-section" id="Topic_1" style="background-color: rgb(255, 0, 255);"> 
                     <h3 style = "background: black; color: white">Topic 1</h3>
                     <article>
                         Getting started with the actual documentation content
@@ -69,7 +71,7 @@
                         </code>
                     </article>
                 </section>
-                <section class="main-section" id="Topic_2">
+                <section class="main-section" id="Topic_2" style="background-color: rgb(255, 38, 0);">
                     <h3 style = "background: black; color: white">Topic 2</h3>
                     <p>
 Another topic about the main topic, for example, if the topic is Java, this could be variables or data types in Java
@@ -79,4 +81,5 @@ Another topic about the main topic, for example, if the topic is Java, this coul
         </div>
     </div>
 </div>
+</body>
 </html>
