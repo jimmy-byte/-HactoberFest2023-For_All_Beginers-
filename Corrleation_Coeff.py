@@ -13,3 +13,5 @@ x=np.array([[17.1,14.7,12.8],[10.6,11.5,13.2]])
 r=np.corrcoef(x[0,:],x[1,:])
 plt.scatter(x[0,:],x[1,:])
 x=np.random.rand(3)
+print(r)
+
