@@ -1,0 +1,265 @@
+body{
+    margin: 0px auto;
+    width: 100%;
+  }
+  .nav{
+    width: 100%;
+    height: 50px;
+    background-color:#142850;
+    position: fixed;
+  }
+  
+  .nav ul{
+    float: right;
+  }
+  
+  .nav ul li{
+    list-style: none;
+    float: left;
+    padding-right: 30px;
+    color: #dae1e7;
+  }
+  
+  .nav ul li a{
+    text-decoration:none;
+    color:#dae1e7;
+  }
+  
+  
+  
+  
+  .home,.contact{
+    background-color: #00909e;
+    display: table;
+    color: #142850;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    font-size: 45px;
+  }
+  .home .inner, .contact .inner{
+   display: table-cell ;
+   vertical-align: middle;
+   padding:60px;
+  }
+  .home .inner img{
+    border-radius: 30%;
+    width: 250px;
+    height: auto;
+  }
+  
+  .about{
+  
+    background-image: url('electronic.jpg');
+    display: table;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    
+    
+   
+  }
+  .about .inner{
+    width: 100%;
+   display: table-cell ;
+    vertical-align: middle;
+   background-color: rgba(0, 0, 0, 0.6);
+   color: #dae1e7;
+  }
+  
+  .about .inner .inner2{
+    
+    width: 70%;
+    display: table-cell ;
+    vertical-align: middle;
+    float: right;
+    padding-right: 15%;
+  }
+  
+  .about .inner h1{
+    font-size: 70px;
+  }
+  
+  .about .inner .inner2 a{
+  
+    font-size: 30px;
+    font-family: 'Grenze Gotisch', cursive;
+  }
+  
+  
+  .education,.hobbies{
+  
+    background-color:#dae1e7;
+    display: table;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    color: #142850;
+    
+  
+  }
+  
+  .education .inner{
+      width:100%;
+      display: table-cell;
+      
+  }
+  .education h1{
+      padding-top: 5px;
+      font-size: 70px;
+  }
+  
+  .education .inner div {
+      float:left;
+      vertical-align: middle;
+      padding-left:15%;
+      padding-top: 80px;
+      font-size: 30px;
+      
+  }
+  
+  
+  .education .inner img, .hobbies div img{
+    
+    width:200px;
+    height: auto;
+    
+  }
+  .skills {
+   background-image: url('skillsbg.jpg');
+    display: table;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    
+  }
+  
+  .skills .inner{
+   background-color: rgba(0, 0, 0, 0.6);
+   color: #dae1e7;
+   width:100%;
+   display:table-cell;
+   text-align:center;
+    
+  }
+  .skills .inner .heading{
+    float: left;
+    text-align:center;
+    padding: 7%;
+    list-style:none;
+    font-size: 30px;
+    
+  }
+  .skills .inner .heading .subpart{
+    font-size:20px;
+    list-style:none;
+    padding-top: 10px;
+  }
+  
+  .skills .inner .heading .subpart li{
+    padding-top: 5px;
+  }
+  
+  .skills .inner h1, .hobbies h1{
+    font-size:70px;
+  }
+  
+  .hobbies div {
+    float: left;
+    padding:9%;
+    text-align:center;
+    font-size:30px;
+  }
+  
+  .contact .inner{
+   display: table-cell ;
+   vertical-align: middle;
+   padding:50px;
+  }
+  .contact h1{
+    padding-top:30px;
+  }
+  .contact h3{
+    padding-top:150px;
+    font-size:30px;
+  }
+  
+  @media (min-width:320px) and (max-width:1023px){
+  .nav{
+    width: 100% auto;
+    height: 80px;
+  }
+  .nav ul{
+    float:right;
+  }
+  .nav ul li{
+   padding: 5px;
+   float:left;
+    }
+  .home .inner{
+  padding-top:70px;
+  width:100%;
+  font-size: 25px;
+  }
+  .home .inner img{
+    width:150px;
+    height: auto;
+  }
+  .about{
+    height: 100vh;
+    width: 100%;
+    background: #142850;
+  
+  }
+  .about .inner .inner2 h1{
+    font-size: 40px;
+  
+  }
+  .about .inner .inner2 a{
+    font-size: 20px;
+  }
+  
+  .education{
+    vertical-align:middle;
+  }
+  .education .inner {
+     float:none;
+  
+  }
+  
+  .education .inner h1, .skills .inner h1, .hobbies h1, .contact h1{
+  font-size: 40px;
+  }
+  .education .inner div, .skills .inner .heading, .hobbies div{
+    float:none;
+    padding-right:10%;
+  }
+  .education .inner img, .hobbies div img{
+    width: 100px;
+    height: auto;
+   } 
+  .education .inner h3{
+    text-align:center;
+    font-size: 15px;
+    padding-top:10px;
+    
+  
+  }
+  .education .inner h5{
+    font-size: 12px;
+    padding-bottom:50px;
+  }
+  
+  .skills .inner .heading li, .hobbies div h3, .contact  h3, .contact h6{
+    font-size:20px;
+  }
+  .skills .inner .heading .subpart li{
+    font-size: 15px;
+    text-align:center;
+  }
+  
+  }
