@@ -1,0 +1,22 @@
+#bk{
+    background-color: rgb(23, 4, 43);
+    color: snow;
+    align-items: center;
+}
+
+.main{
+    border: 20px groove green;
+    background-color: gray;
+    color: black;
+    margin: auto;
+    width: 590px;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+}
+
+.main h2{
+    text-decoration: underline;
+    font-size: 1.67rem;
+    font-family: 'Courier New', Courier, monospace;
+}
