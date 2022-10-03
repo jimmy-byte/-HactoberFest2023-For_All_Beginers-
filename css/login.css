@@ -22,7 +22,7 @@ input{
     border-radius: 0rem 0rem 1rem 1rem;
 }
 body{
-    height: 80%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,4 +50,9 @@ input:hover{
 form{
     display: flex;
     flex-direction: column;
+}
+
+a{
+    color: green;
+    text-decoration: none;
 }
