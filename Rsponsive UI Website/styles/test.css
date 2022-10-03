@@ -1,0 +1,124 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.nav-wrapper{
+    display:flex;
+    flex-direction:row;
+}
+.name{
+    flex:50%;
+    text-align: left;
+    padding-top:15px;
+    padding-left:20px;
+    padding-bottom:10px;
+    background-color: grey;
+}
+.name a{
+    text-decoration: none;
+    color:white;
+    cursor: pointer;
+}
+.menu{
+    flex:50%;
+    text-align: right;
+    padding-top:15px;
+    padding-right:20px;
+    padding-bottom:10px;
+    justify-content: space-around;
+    background-color: grey;
+    word-spacing: 15px;
+
+}
+.menu a{
+    text-decoration: none;
+    color:white;
+}
+img{
+    width:50%;
+    max-width: 90%;
+    height: auto;
+}
+.banner{
+    text-align: center;
+    font-family: cursive;
+}
+.about{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 80%;
+    box-shadow: 0 0 10px 2px grey;
+    margin-top:20px;
+}
+.about-2{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 80%;
+    box-shadow: 0 0 10px 2px grey;
+    margin-top:20px;
+}
+.text{
+    width:50%;
+    text-align: left;
+    padding:10px 15px;
+    word-wrap:break-word;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.text-name{
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+    margin-top: 15%;
+}
+.text-content{
+    margin:10px 20px;
+}
+.myimg{
+    text-align: center;
+    padding: 20px 0;
+}
+.myimg img{
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 2px rgba(220, 20, 60,0.5);
+}
+@media (max-width: 600px) {
+    .nav-wrapper{
+      flex-direction: column;
+      flex:100%;
+    }
+    .name{
+        text-align: center;
+        padding:15px 0 5px 0;
+    }
+    .menu{
+        text-align: center;
+        padding:5px 0  10px 0;
+        background-color: rgba(128, 128, 128, 0.3);
+    }
+    .menu a{
+        color:black;
+
+    }
+    .about{
+        flex-direction: column-reverse;
+    }
+    .about-2{
+        flex-direction: column;
+    }
+    .text{
+        width: fit-content;
+    }
+    .text-name{
+        margin-top: 0;
+    }
+    img{
+        flex: 100%;
+        justify-content: center;
+    }
+    .myimg{
+        text-align: center;
+    }
+}
+
