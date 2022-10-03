@@ -4,10 +4,15 @@
   <title>Admin Dashboard</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
+    body{
+      background: rgb(218, 242, 251);
+    }
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
       margin-bottom: 0;
@@ -26,9 +31,30 @@
     
     /* Set black background color, white text and some padding */
     footer {
-      background-color: #555;
+      background-color: blueviolet;
       color: white;
       padding: 15px;
+      position: absolute;
+      bottom: 0px;
+      border-top-left-radius: 14px;
+      border-top-right-radius: 14px;
+    }
+    .navbar-brand{
+      color: white;
+      font-weight: bold;
+    }
+    nav{
+      border-bottom-left-radius: 14px !important;
+      border-bottom-right-radius: 14px !important;
+    }
+    .nav-link{
+      transition: all 0.4s;
+      border-radius: 8px;
+      color: white;
+      margin: 4px;
+    }
+    .nav-link:hover{
+      background-color: rgb(236, 239, 237);
     }
     
     /* On small screens, set height to 'auto' for sidenav and grid */
@@ -39,49 +65,105 @@
       }
       .row.content {height:auto;} 
     }
+
+
+    .logoutIcon{
+      width: 20px;
+    }
+    h1:hover{
+      color: rgb(70, 16, 16);
+    }
+
+    .middleCoontent{
+      background: linear-gradient(to right, rgb(251, 164, 251), rgb(250, 180, 50));
+      font-size: 20px;
+      padding: 12px;
+      margin: 0px;
+      border: 5px solid transparent;
+      border-radius: 12px;
+      transition: all 0.3s;
+      
+    }
+    .middleCoontent:hover{
+      box-shadow: 3px 3px 3px gray;
+    }
+
+    nav{
+      background: blueviolet !important;
+    }
+    nav a{
+      color: white;
+    }
+
+    .mainContent{
+      display: flex !important;
+      flex-direction: row !important;
+
+    }
+    .sidenav{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-evenly;
+      border-radius: 8px;
+      border: 3px solid transparent;
+    }
+    .leftSidenav{
+      background:linear-gradient(to right,white, rgb(251, 164, 251));
+    }
+    .rightSidenav{
+      background: linear-gradient(to right,rgb(250, 180, 50), white);
+    }
   </style>
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-expand-lg ">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">Logo</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
+    <a class="navbar-brand" href="#">Logo</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" style="color: white;" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="#">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="#">Contract</a>
+        </li>
       </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>
-    </div>
+        <form class="d-flex" role="search">
+          <button class="btn btn-outline-dark" class="logoutButton" type="submit" style="color: white;">
+            <img class="logoutIcon" src="./Dashboard_img/icons8-log-out-64.png" alt=""> LogOut
+          </button>
+        </form>
+      </div>
   </div>
 </nav>
   
-<div class="container-fluid text-center">    
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
+<div class="container-fluid text-center my-3">    
+  <div class="row content mainContent">
+    <div class="col-sm-2 sidenav leftSidenav">
       <p><a href="#">Link</a></p>
       <p><a href="#">Link</a></p>
       <p><a href="#">Link</a></p>
     </div>
-    <div class="col-sm-8 text-left"> 
+    <div class="col-sm-8 text-left middleCoontent"> 
       <h1>Welcome</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <hr>
       <h3>Test</h3>
       <p>Lorem ipsum...</p>
     </div>
-    <div class="col-sm-2 sidenav">
+    <div class="col-sm-2 sidenav rightSidenav">
       <div class="well">
         <p>ADS</p>
       </div>
@@ -93,7 +175,7 @@
 </div>
 
 <footer class="container-fluid text-center">
-  <p>Footer Text</p>
+  <p>&#169; Footer Text 2022</p>
 </footer>
 
 </body>
