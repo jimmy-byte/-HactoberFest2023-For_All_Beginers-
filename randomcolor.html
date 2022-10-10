@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">  
+    <title>Random Colors</title>
+</head>
+<body>
+  <h1>
+      <span class="letters">H</span>
+      <span class="letters">E</span>
+      <span class="letters">L</span>
+      <span class="letters">L</span>
+      <span class="letters">O</span>
+    </h1>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- CSS -->
+<!-- Create a CSS file and name it (ex: style.css) -->
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+}
+
+h1{
+    font-size: 15rem;
+    font-family: Fredoka One;
+}
+
+.letters{
+    transition: color 1000ms;
+}
+
+<!-- END OF CSS -->
+
+
+
+<!-- Javacript -->
+<!--Create a javascript file and name it (ex: script.js)  -->
+
+function randomRGB(){
+    const r = Math.floor(Math.random() * 256)
+    const g = Math.floor(Math.random() * 256)
+    const b = Math.floor(Math.random() * 256)
+    return `rgb(${r}, ${g}, ${b})`
+}
+
+//changing the color of each letter
+const letters = document.querySelectorAll('.letters');
+setInterval(function(){
+for (let letter of letters){
+    letter.style.color = randomRGB()
+}
+}, 1000)
+
+
+<!-- END OF JAVACRIPT -->
