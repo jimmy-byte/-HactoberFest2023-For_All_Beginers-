@@ -1,0 +1,44 @@
+
+body{
+  font-size: 18px;
+  background-color: #E8F9FD;
+  background-image: linear-gradient(#A66CFF ,#9C9EFE ,#AFB4FF);
+  line-height: 1.5;
+}
+p{
+  color: #8f8f8f;
+}
+input{
+  padding: 10px 50px;
+}
+.container{
+  background-color: #fff;
+  width: 700px;
+  padding: 100px;
+  margin: 50px auto 0;
+  border-top: 5px solid #5800FF;
+  box-shadow: 0 0 7px 5px rgba(0,0,0,0.5);
+}
+.form-heading{
+  line-height: 1.5;
+  padding: 25px 0;
+  width:40%;
+  text-align: left;
+}
+.form-title{
+  margin-bottom: 40px;
+  width: 50%;
+}
+.icon{
+  position: absolute;
+  font-size: 15px;
+  padding: 10px 12px;
+}
+.form-wrapper{
+  position: relative;
+  margin: 20px auto;
+}
+.form-control{
+  border: none;
+  border-bottom: 1px solid;
+}
