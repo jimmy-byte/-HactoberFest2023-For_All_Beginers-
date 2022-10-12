@@ -1,24 +1,91 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Javascript Login Form Validation</title>
-<!-- Include CSS File Here -->
-<link rel="stylesheet" href="css/style.css"/>
-<!-- Include JS File Here -->
-<script src="js/login.js"></script>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Login.css">
+    <title>Javascript Login Form Validation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
-<body>
-<div class="container">
-<div class="main">
-<h2>Javascript Login Form Validation</h2>
-<form id="form_id" method="post" name="myform">
-<label>User Name :</label>
-<input type="text" name="username" id="username"/>
-<label>Password :</label>
-<input type="password" name="password" id="password"/>
-<input type="button" value="Login" id="submit" onclick="validate()"/>
-</form>
-<span><b class="note">Note : </b>For this demo use following username and password. <br/><b class="valid">User Name : Formget<br/>Password : formget#123</b></span>
-</div>
-</div>
-</body>
+  <style>
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: rgba(232, 214, 214, 0.33);
+    }
+    .error{
+      color: red;
+      margin: 0px;
+      text-align: left;
+  }
+  #form-container{
+    box-sizing: border-box;
+    border: 1px solid;
+    padding: 15px;
+    background-color: aliceblue;
+  }
+  </style>
+  <body>
+    <div id="form-container">
+        <h2 class="mb-4" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Javascript Login Form Validation</h2>
+        <form action="" onsubmit="return validateForm()">
+            <div class="form-group">
+              <input class="form-control" id="username" type="text"  placeholder="Enter your name"> <br>
+              <p id="userError" class="error"></p>
+            </div>
+            <div class="form-group">
+              <input class="form-control" id="password" type="password"  placeholder="Enter password"> <br>
+              <p id="passError" class="error"></p>
+            </div>
+            <!-- <input type="email" placeholder="Enter email address"> <br>
+            <input type="number" placeholder="Enter contact number"> <br> -->
+            <!-- <input type="submit"> -->
+            <button class="btn btn-primary mb-5">Login</button>
+        </form>
+        <p><b>Note:</b>For this demo use following username and password.</p>
+        <p><b>Username: Formget</b></p>
+        <p><b>Password: formget#123</b></p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        let username = document.getElementById("username");
+        let password = document.getElementById("password");
+        let flag = 1;
+        function validateForm(){
+            /*Checking User Name validation*/
+            if(username.value == ""){
+                document.getElementById("userError").innerHTML = "User Name is empty";
+                flag = 0;
+            }else if(username.value.length<3){
+                document.getElementById("userError").innerHTML = "User Name require minimum 3 characters";
+                flag = 0;
+            }
+            else{
+                document.getElementById("userError").innerHTML = "";
+                flag = 1;
+            }
+            /*Checking Password validation*/
+            if(password.value == ""){
+                document.getElementById("passError").innerHTML = "Password is empty";
+                flag = 0;
+            }
+            else{
+                document.getElementById("passError").innerHTML = "";
+                flag = 1;
+            }
+            if(flag){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+    </script>
+  </body>
 </html>
