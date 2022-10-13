@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Page title</title>
+   </head>
+   <body>
+      <h4>Area of rectangle</h4>
+      Length &nbsp &nbsp<input type="number" id="length" placeholder="eg 7.3">
+      <br> <br>
+      Breadth &nbsp <input type="number" id="breadth" placeholder="eg 1.75">
+      <br> <br>
+      <input type="button" value="Calculate Area" id="btn">
+      <br> <br>
+      Area is <input id="ans" maxlength="0">
+      <script>
+         let btn = document.querySelector("#btn");
+         let output = document.getElementById("ans")
+         
+         btn.addEventListener("click", function(){
+         
+         let length = document.getElementById("length").value;
+         let breadth = document.getElementById("breadth").value;	
+         
+         		if (length && breadth){   // NaN == false
+         			output.value = (length * breadth);
+         		} else {
+         			output.value = "Fill above box first";
+         		}
+         });
+      </script>
+   </body>
+</html>
