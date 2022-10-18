@@ -1,6 +1,6 @@
 
 
-<h1 align="center"> HactoberFest2020-For_All_Beginers </h1>
+<h1 align="center"> HactoberFest2020-For_All_Beginners </h1>
 
 ***
 
