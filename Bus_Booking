@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>redbus_lite</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            width: 320px;
+            gap: 10px;
+        }
+
+        .box {
+            height: 200px;
+            width: 100px;
+            border: 2px solid red;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div id="output"></div>
+                <div class="main">
+                    <div id="seat1" onclick="handleClick('#seat1')" class="box"></div>
+                    <div id="seat2" onclick="handleClick('#seat2')" class="box"></div>
+                    <div id="seat3" onclick="handleClick('#seat3')" class="box"></div>
+                    <div id="seat4" onclick="handleClick('#seat4')" class="box"></div>
+                    <div id="seat5" onclick="handleClick('#seat5')" class="box"></div>
+                    <div id="seat6" onclick="handleClick('#seat6')" class="box"></div>
+                </div>
+                <button type="button" class="btn btn-dark mt-4" onclick="bookSeats()">BookSeats</button>
+            </div>
+            <div class="col-sm-4">
+                <div class="card d-none" id="bill">
+                    <div class="card-header">Bill</div>
+                    <div class="card-body">
+                        <p>Selected Seats: <strong id="seats">0</strong></p>
+                        <p>EstimatedCost: <strong id="ecost">0</strong></p>
+                        <p>GST:</p> <strong id="gst">0</strong></p>
+                        <p>Total: <strong id="total">0</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function handleClick(arg) {
+            let x = document.querySelector(arg)
+
+            //    if ('jr tithe bg-secondary class nahi')
+            if (!x.classList.contains('bg-secondary')) {
+                x.classList.contains("bg-success")
+                    ? x.classList.remove("bg-success")
+                    : x.classList.add("bg-success")
+            }
+            display()
+        }
+        function display() {
+            let allSeats = document.querySelectorAll(".bg-success")
+            allSeats.length >= 1
+                ? document.querySelector("#bill").classList.remove("d-none")
+                : document.querySelector("#bill").classList.add("d-none")
+
+            let Seats = allSeats.length
+            let est_cost = 500 * Seats
+            let gst = est_cost * 0.18
+            let total = est_cost + gst
+            document.querySelector("#seats").innerHTML = Seats
+            document.querySelector("#ecost").innerHTML = est_cost
+            document.querySelector("#gst").innerHTML = gst
+            document.querySelector("#total").innerHTML = total
+        }
+        function bookSeats() {
+            let allSelectedSeats = document.querySelectorAll(".bg-success")
+            for (let i = 0; i < allSelectedSeats.length; i++) {
+                allSelectedSeats[i].classList.remove("bg-success")
+                allSelectedSeats[i].classList.add("bg-secondary")
+            }
+            document.querySelector("#output").innerHTML = ` 
+            <div  class="alert alert-success"> you have Booked ${allSelectedSeats.length} Seats </div>`
+        }
+
+
+    </script>
+</body>
+
+
+</html>
