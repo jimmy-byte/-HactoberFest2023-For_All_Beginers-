@@ -1,3 +1,8 @@
+document.querySelector('.theme').addEventListener('click', function() {
+    document.querySelector('section').classList.toggle('light_theme');
+    document.querySelector('.brand').classList.toggle('dark_font');
+    document.querySelector('form').classList.toggle('light_dark');
+});
 const searchForm = document.querySelector('form');
 const searchResultDiv = document.querySelector('.serarch-result');
 const container = document.querySelector('.container');
@@ -12,11 +17,11 @@ const APP_key = '85f12954289c38f981a800b0d9c058b8';
 //getting input from search bar
 
 searchForm.addEventListener('submit', (e) => {
-    e.preventDefault()
-    searchQuery = e.target.querySelector('input').value;
-    fetchAPI();
+        e.preventDefault()
+        searchQuery = e.target.querySelector('input').value;
+        fetchAPI();
 
-}
+    }
 
 );
 async function fetchAPI() {
@@ -42,8 +47,7 @@ function generateHTML(results) {
                     <p class="item-data">Health label ${result.recipe.healthLabels}</p>
                 </div>  `
 
-    }
-    );
+    });
 
     searchResultDiv.innerHTML = generatedHTML;
 }
