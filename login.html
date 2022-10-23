@@ -1,24 +1,95 @@
+<!-- ---------------  Created by Shivam patel -----------------   -->
 <html>
+
 <head>
-<title>Javascript Login Form Validation</title>
-<!-- Include CSS File Here -->
-<link rel="stylesheet" href="css/style.css"/>
-<!-- Include JS File Here -->
-<script src="js/login.js"></script>
+    <title>Javascript Login Form Validation</title>
+    <!-- Include CSS File Here -->
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <!-- Include JS File Here -->
+    <!-- <script src="js/login.js"></script> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            background-color: black;
+            color: white;
+            margin: 2px 500px;
+            padding: 2px;
+            text-align: center;
+            width: fit-content;
+
+        }
+
+        #form_id {
+            color: black;
+            background-color: grey;
+            display: flex;
+            flex-direction: column;
+            border: groove white;
+            margin: 10px;
+            padding: 10px;
+            justify-content: space-between;
+        }
+
+        #submit {
+            width: 10vw;
+            height: 5vh;
+            margin-left: 100px;
+        }
+
+        .result_2 {
+            background-color: yellow;
+            border: solid red;
+            text-align: center;
+            width: fit-content;
+            margin: 0px 600px;
+        }
+    </style>
 </head>
+
 <body>
-<div class="container">
-<div class="main">
-<h2>Javascript Login Form Validation</h2>
-<form id="form_id" method="post" name="myform">
-<label>User Name :</label>
-<input type="text" name="username" id="username"/>
-<label>Password :</label>
-<input type="password" name="password" id="password"/>
-<input type="button" value="Login" id="submit" onclick="validate()"/>
-</form>
-<span><b class="note">Note : </b>For this demo use following username and password. <br/><b class="valid">User Name : Formget<br/>Password : formget#123</b></span>
-</div>
-</div>
+    <div class="container">
+        <div class="main">
+            <h2>Javascript Login Form Validation</h2>
+            <form id="form_id" method="post" name="myform">
+                <label><b>
+                        <h3>User Name</h3>
+                    </b></label>
+                <input type="text" name="username" id="username" value="" />
+                <label><b>
+                        <h3>Password</h3>
+                    </b></label>
+                <input type="password" name="password" id="password" value="" />
+                <input type="button" value="Login" id="submit" onclick="myFunction()" />
+            </form>
+
+        </div>
+        <span><b class="note">Note : </b>For this demo use following username and password. <br /><b class="valid">User
+                Name :
+                Formget<br />Password : formget#123</b></span>
+        <pre class="result_2">
+        <h2>Result</h2>
+        <h3><p id="demo"></p></h3>
+        </pre>
+    </div>
+
+    <script>
+        var user_name;
+        var pass_word;
+        function myFunction() {
+            user_name = document.getElementById("username").value;
+            pass_word = document.getElementById("password").value;
+            if (user_name === "Formget" && pass_word === "formget#123") {
+                document.getElementById("demo").innerHTML = "Successfully login "
+            }
+            else {
+                document.getElementById("demo").innerHTML = "Not Successfully login "
+            }
+        }
+    </script>
 </body>
+
 </html>
