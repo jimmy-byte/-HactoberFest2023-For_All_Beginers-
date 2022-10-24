@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,400&display=swap');
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* align-items: center; */
+            /* min-width: 20rem; */
+            max-width: 25rem;
+        }
+        #name , #Email , #pass , #conf-pass{
+            min-width: 20rem;
+            padding: 0.5em;
+
+
+        }
+        .signupform{
+            background:#fffddd;
+            border-radius: 18px;
+            margin: 2rem auto;
+            padding:5rem 0;
+            max-width: 30rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 10px 25px rgba(8,92,102,0.2);
+        }
+        .s-btn{
+            min-width:12em ;
+            padding: 1em;
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            color: aliceblue;
+            font-size: 16px;
+            text-transform: uppercase;
+            background: orangered;
+            border: none;
+            border-radius: 28px;
+            cursor: pointer;
+        }
+        label{
+            padding: 0.6rem 0 0.4rem 0; 
+        }
+    </style>
+</head>
+<body>
+    <div class="signupform">
+    <form action="">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter Your Name">
+        <label for="Email">Email ID</label>
+        <input type="email" name="Email" id="Email">
+        <label for="pass">Create Password</label>
+        <input type="password" name="pass" id="pass">
+        <label for="conf-pass">Confirm Password</label>
+        <input type="password" name="conf-pass" id="conf-pass">
+        
+    </form>
+    <p>You already have an Account?<a href="#">Log In</a></p>
+    <input type="button" onclick="window.location.href='#'" class="s-btn"value="SignUp">
+</div>
+    
+</body>
+</html>
