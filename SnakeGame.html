@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        canvas {
+            background-color: rgb(255, 243, 205);
+            border: 20px solid rgb(90, 90, 90);
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas width="1000" height="600"></canvas>
+
+    <script>
+
+        let canvas = document.querySelector("canvas");
+        let ctx = canvas.getContext("2d");
+        let boardWidth = 1000;
+        let boardHeight = 600;
+
+        let cellSize = 50;      // snake & food block size   
+        let snakeCells = [[0, 0], [50, 0], [100, 0]];    // initial snake coordinates
+        // 100,0 is snake's head
+        // to move forward in xDirection: 100+cellSize,0 = 150,0
+        // when new head is formed, last tail is deleted
+        // On each interval, we update snake position & draw snake on updated position
+
+        let gameOver = false;
+        let direction = "right";
+
+        let foodCells = generateRandomCoordinates();
+
+        let score = 0;
+
+        let intervalId = setInterval(function () {
+            update();
+            draw();
+        }, 100);
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "ArrowUp") {
+                direction = "up";
+            } else if (event.key === "ArrowDown") {
+                direction = "down";
+            } else if (event.key === "ArrowLeft") {
+                direction = "left";
+            } else if (event.key === "ArrowRight") {
+                direction = "right";
+            }
+        });
+
+        function update() {      // finds new x,y coordinates using old coordinate
+
+            // getting snake head
+            let headX = snakeCells[snakeCells.length - 1][0]; // xCoordinate of head
+            let headY = snakeCells[snakeCells.length - 1][1]; // yCoordinate of head
+
+            // updating snake head
+            let newHeadX;
+            let newHeadY;
+
+            // updating direction
+            if (direction === "right") {
+                newHeadX = headX + cellSize;
+                newHeadY = headY;
+                if (newHeadX === boardWidth) {
+                    gameOver = true;
+                }
+            } else if (direction === "down") {
+                newHeadX = headX;
+                newHeadY = headY + cellSize;
+                if (newHeadY === boardHeight) {
+                    gameOver = true;
+                }
+            } else if (direction === "up") {
+                newHeadX = headX;
+                newHeadY = headY - cellSize;
+                if (newHeadY < 0) {
+                    gameOver = true;
+                }
+            } else if (direction === "left") {
+                newHeadX = headX - cellSize;
+                newHeadY = headY;
+                if (newHeadX < 0) {
+                    gameOver = true;
+                }
+            }
+
+            snakeCells.push([newHeadX, newHeadY]);
+            // snake eat food
+            if (newHeadX === foodCells[0] && newHeadY === foodCells[1]) {
+                foodCells = generateRandomCoordinates();
+                score += 1;
+            } else {
+                snakeCells.shift();
+            }
+        }
+
+        function draw() {        // draws rectangles at snakeCells
+            if (gameOver === true) {
+                clearInterval(intervalId);
+                ctx.clearRect(0, 0, boardWidth, boardWidth);
+                ctx.fillStyle = "black";
+                ctx.font = "24px MV Boli";
+                ctx.fillText(`Score: ${score}`, 20, 35);
+                ctx.font = "100px MV Boli";
+                ctx.fillText("GAME OVER", boardWidth / 5, boardHeight / 2);
+                ctx.font = "50px MV Boli";
+                ctx.fillText("Refresh to play again!", boardWidth / 4, boardHeight / 1.6);
+                return;
+            }
+            ctx.clearRect(0, 0, boardWidth, boardHeight);
+            for (let cell of snakeCells) {
+                ctx.fillStyle = "darkorange";
+                ctx.strokeStyle = "white";
+                ctx.strokeRect(cell[0], cell[1], cellSize, cellSize);
+                ctx.fillRect(cell[0], cell[1], cellSize, cellSize);
+            }
+            ctx.fillStyle = "red";
+            ctx.fillRect(foodCells[0], foodCells[1], cellSize, cellSize);
+
+            ctx.fillStyle = "black";
+            ctx.font = "24px MV Boli";
+            ctx.fillText(`Score: ${score}`, 20, 35);
+        }
+
+        function generateRandomCoordinates() {
+            return [
+                Math.round((Math.random() * (boardWidth - cellSize)) / cellSize) * cellSize,
+                Math.round((Math.random() * (boardHeight - cellSize)) / cellSize) * cellSize
+            ]
+        }
+
+
+    </script>
+</body>
+
+</html>
