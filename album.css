@@ -1,6 +1,6 @@
 .jumbotron {
   padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 3rem; /*   better to use vh or vw instead of px,rem,em to get better responsiveness */
   margin-bottom: 0;
   background-color: #fff;
 }
