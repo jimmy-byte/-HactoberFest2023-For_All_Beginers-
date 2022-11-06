@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>COVID_19 Self Assessment</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.container{
+  max-width: 75%;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+  word-spacing: 500px;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+  margin-bottom: 5px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #9b59b6;
+}
+ form .vaccine-details .vaccine-title{
+  font-size: 16px;
+  font-weight: 500;
+ }
+ form .dose-details .dose-title{
+  font-size: 16px;
+  font-weight: 500;
+ }
+ form .normal-details .normal-title{
+  font-size: 16px;
+  font-weight: 500;
+ }
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .category1{
+  display: flex;
+  width: 80%;
+  margin: 14px 0 ;
+  justify-content: space-between;
+}
+form .category2{
+  display: flex;
+  width: 80%;
+  margin: 14px 0 ;
+  justify-content: space-between;
+}
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+form .category1 label{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+form .category1 label .dot1{
+ height: 18px;
+ width: 18px;
+ border-radius: 50%;
+ margin-right: 10px;
+ background: #d9d9d9;
+ border: 5px solid transparent;
+ transition: all 0.3s ease;
+}
+form .category2 label{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+form .category2 label .dot2{
+ height: 18px;
+ width: 18px;
+ border-radius: 50%;
+ margin-right: 10px;
+ background: #d9d9d9;
+ border: 5px solid transparent;
+ transition: all 0.3s ease;
+}
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+ #dot-3:checked ~ .category label .three{
+   background: #9b59b6;
+   border-color: #d9d9d9;
+ }
+ #dot1-1:checked ~ .category1 label .one,
+ #dot1-2:checked ~ .category1 label .two,
+ #dot1-3:checked ~ .category1 label .three{
+   background: #9b59b6;
+   border-color: #d9d9d9;
+ }
+ #dot2-1:checked ~ .category2 label .one,
+ #dot2-2:checked ~ .category2 label .two,
+ #dot2-3:checked ~ .category2 label .three{
+   background: #9b59b6;
+   border-color: #d9d9d9;
+ }
+ form input[type="radio"]{
+   display: none;
+ } 
+ form .button{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button button{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+ form .button button:hover{
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  }
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  }
+}
+  /* .checkboxes {
+    
+  } */
+  
+  .checkboxes input{
+    margin: 0px 0px 0px 0px;
+    background:grey;
+  }
+  
+  .checkboxes label{
+    margin: 0px 20px 0px 3px;
+  }
+  
+     </style>
+   </head>
+<body>
+  <div class="container">
+    <div class="title"><strong>Self-Assessment-Report </strong></div>
+    <div class="content">
+      <form action="#">
+        <div class="result" id="result">
+          <label><h2><br>Output: </h2></label>
+          <p><span id='display'></span></span></p>
+        </div>
+        <div class="all" id="all">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Confirm/Change your Age</span>
+            <input type="text"name="age" id="age" placeholder="Enter your age" required>
+          </div>
+          </div>
+          <div class="vaccine-details">
+            <input type="radio" name="vaccine" id="dot-1" value="dot-1">
+            <input type="radio" name="vaccine" id="dot-2" value="dot-2">
+            <span class="vaccine-title">Have you taken the Vaccine?</span>
+            <div class="category">
+              <label for="dot-1">
+              <span class="dot one"></span>
+              <span class="vaccine">Yes</span>
+            </label>
+            <label for="dot-2">
+              <span class="dot two"></span>
+              <span class="vaccine">No</span>
+            </label>
+            </div>
+            </div>
+            <div class="dose-details">
+              <input type="radio" name="dose" id="dot1-1">
+              <input type="radio" name="dose" id="dot1-2">
+              <span class="dose-title">If Yes how many doses?</span>
+              <div class="category1">
+                <label for="dot1-1">
+                <span class="dot1 one"></span>
+                <span class="dose">First Dose</span>
+              </label>
+              <label for="dot1-2">
+                <span class="dot1 two"></span>
+                <span class="dose">Both Doses</span>
+              </label>
+          </div>
+          <div class="input-box">
+            <span>
+            <span class="details">Are you experiencing any of the following symptoms?</span>
+            <!-- <div class="category"> -->
+            <div class="checkboxes">
+            <input type="checkbox" id="box" name="box" value="box">
+            <label for="box">Cough</label>
+            <input type="checkbox" id="fever" name="box" value="fever">
+            <label for="fever">Fever</label>
+            <input type="checkbox" id="breathe" name="breathe" value="breathe">
+            <label for="breathe">Difficulty in Breathing</label>
+            <input type="checkbox" id="sore" name="sore" value="sore">
+            <label for="sore">Sore throat</label>
+            <input type="checkbox" id="ache" name="ache" value="ache">
+            <label for="chest">Body ache</label>
+            <input type="checkbox" id="chest" name="chest" value="chest">
+            <label for="chest">Chest Congestion or runny nose</label>
+            <input type="checkbox" id="smell" name="smell" value="smell">
+            <label for="eyes">Pink eyes</label>
+            <input type="checkbox" id="hear" name="hear" value="hear">
+            <label for="smell">Loss of smell and taste</label>
+            <input type="checkbox" id="eyes" name="eyes" value="eyes">
+            <label for="hear">Hearing impairment</label>
+            <input type="checkbox" id="gastro" name="gastro" value="gastro">
+            <label for="gastro">Gastrointestinal symptoms</label>
+            <input type="checkbox" id="none" name="none" value="none">
+            <label for="gastro">None of These</label>
+            </span>
+          </div>
+          <br>
+          <div class="input-box">
+            <span>
+            <span class="details">Do you have any of the following pre-existing conditions?</span>
+            <!-- <div class="category"> -->
+            <div class="checkboxes">
+            <input type="checkbox" id="diabetes" name="diabetes" value="diabetes">
+            <label for="diabetes">Diabetes</label>
+            <input type="checkbox" id="hyper" name="hyper" value="hyper">
+            <label for="hyper">Hypertension</label>
+            <input type="checkbox" id="lung" name="lung" value="lung">
+            <label for="lung">Lung disease</label>
+            <input type="checkbox" id="heart" name="heart" value="heart">
+            <label for="heart">Heart Disease</label>
+            <input type="checkbox" id="kidney" name="kidney" value="kidney">
+            <label for="kidney">Kidney Disorder</label>
+            <input type="checkbox" id="asthma" name="asthma" value="asthma">
+            <label for="asthma">Asthma</label>
+            <input type="checkbox" id="noneof" name="none" value="none">
+            <label for="gastro">None of These</label>
+            </span>
+          </div><br>
+          <div class="normal-details">
+            <input type="radio" name="normal" id="dot2-1">
+            <input type="radio" name="normal" id="dot2-2">
+            <input type="radio" name="normal" id="dot2-3">
+            <span class="normal-title">Which of the following applies to you?</span>
+            <div class="category2">
+              <label for="dot2-1">
+              <span class="dot2 one"></span>
+              <span class="normal">I have recently interacted with a COVID-19 +ve person</span>
+            </label>
+            <label for="dot2-2">
+              <span class="dot2 two"></span>
+              <span class="normal">I examined a COVID-19 confirmed case</span>
+            </label>
+            <label for="dot2-3">
+              <span class="dot2 three"></span>
+              <span class="normal">None of the above</span>
+            </label>
+        </div>
+        <div class="button">
+          <button id="submit_btn">Submit</button><br><br>
+          
+          
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+  <script language="JavaScript">
+    document.getElementById("result").style.display="none";
+    // console.log(getElementsByName("vaccine"));
+    document.getElementById("submit_btn").addEventListener("click", function(event){
+      event.preventDefault();
+      var s="";
+      s+=document.getElementById("age").value>=50?"<br>◈ According to your age you are at higher risk for severe illness on getting COVID-19.<br>":"<br>◈ Since your age is less than 50, the risk for severe illness with COVID-19 is lesser.<br>";
+      var x=document.getElementsByName("vaccine");
+      
+      // x.map((y)=>{console.log(y.value)});
+      // console.log(x.length);
+      for(var i=0;i<x.length;i++)
+      {
+        if(x[i].checked)
+        {
+          s+=x[i].value=="dot-1"?"◈ As you have taken vaccine you are safer but maintaing precautions is a must.<br>":"◈ Please take the vaccine when available and try to follow the COVID-19 precautions.<br>";
+        }
+      }
+      var y=document.getElementsByName("dose");
+      var t="";
+      // x.map((y)=>{console.log(y.value)});
+      console.log(y.length);
+      for(var j=0;j<y.length;j++)
+      {
+        if(y[j].checked)
+        {
+          s+=y[j].value=="dot1-1"?"◈ Please take the second dose of the vaccine when available.<br>":"◈ Congrats ! You have reduced your chance of getting COVID-19 by 99.96% by taking both doses of the vaccine.<br>";
+          // console.log("high");
+          // console.log(x[i].value);
+        }
+      }
+      s+=document.getElementById("none").checked?"◈ Since you don't have any of the above symptoms,you are safe.<br>":"◈ Please consult a Doctor before your condition detoriate further.<br>";
+      s+=document.getElementById("noneof").checked?"◈ Since you don't have any of the above pre-existing conditions, your chance of hospitalization,intensive care, or of requiring a ventilator is less.<br>":"◈Since you have pre-existing conditions(comorbidity) your chance of hospitalization,intensive care, or of requiring a ventilator is more on getting COVID-19,so please stay safe by following protocols.<br>";
+      var z=document.getElementsByName("normal");
+      var u="";
+      // x.map((y)=>{console.log(y.value)});
+      console.log(z.length);
+      for(var k=0;k<z.length;k++)
+      {
+        if(z[k].checked)
+        {
+          s+=z[k].value=="dot2-3"?"◈ Since you haven't interacted or examined anyone,you are safe.<br>":"◈ If you observe any of the symptoms in yourself within 14 days of interaction please consult a doctor.<br>";
+          // console.log("high");
+          // console.log(x[i].value);
+        }
+      }
+      document.getElementById('display').innerHTML=s;
+      document.getElementById("all").style.display="none";
+      document.getElementById("result").style.display="block";
+      // document.getElementById('display').innerHTML = 
+      //                   //document.getElementById("ref_no").value + '-' +
+      //                 //document.getElementById("age").value ; 
+      //                 document.getElementsByName("vaccine");
+                      // + ' (' + document.getElementById("year").value +')'
+                      // + ' ' + '<i>' + document.getElementById("title").value + '</i>'+', ' + document.getElementById("edition").value + ' edn., '
+                      // + document.getElementById("place").value + ': ' + document.getElementById("pub_name").value  + '.' ;
+    });
+  </script>
+</body>
+</html>
