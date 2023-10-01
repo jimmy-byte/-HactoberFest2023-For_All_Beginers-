@@ -1,0 +1,81 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.applet.*;
+/*
+<applet code="Mini_P2_2.class" width=500 height=500>
+</applet>
+*/
+public class Mini_P2_2 extends JApplet implements ActionListener , ItemListener
+{
+	JLabel jl1,jl2,jl3,jl4;
+	JTextField jt;
+	JButton jb;
+	JCheckBox cb;
+	JRadioButton b1;
+	JComboBox<String> bookList;	
+	String str=" ";
+	public void init() 
+	{
+		FlowLayout fl = new FlowLayout();
+		setLayout(fl);
+			
+		jl1 = new JLabel("Enter your Name");
+		add(jl1);
+		
+		jt = new JTextField(15);
+		add(jt);
+		
+		jl3 = new JLabel("Select your gender");
+		add(jl3);
+		
+		JRadioButton b1 = new JRadioButton("Male");
+		b1.addActionListener(this);
+		b1.addItemListener(this);
+		add(b1);
+		
+		JRadioButton b2 = new JRadioButton("Female");
+		b2.addActionListener(this);
+		b2.addItemListener(this);
+		add(b2);
+		
+		jl2 = new JLabel("Select your interests");
+		add(jl2);
+		
+		cb = new JCheckBox("Video Games");
+		cb.addItemListener(this);
+		add(cb);
+		
+		cb = new JCheckBox("Football");
+		cb.addItemListener(this);
+		add(cb);
+		
+		cb = new JCheckBox("Swimming");
+		cb.addItemListener(this);
+		add(cb);
+				
+		jl4 = new JLabel("Select your Languages");
+		add(jl4);
+		String[] bookTitles = new String[] {"Java","C","C++"};
+		bookList = new JComboBox<String>(bookTitles);
+		add(bookList);
+		bookList.addActionListener(this);
+		bookList.addItemListener(this);
+		
+		
+		jb = new JButton("Submit here");
+		add(jb);		
+		
+		jb.addActionListener(this);		
+	}
+	public void itemStateChanged(ItemEvent ie) 
+	{
+		repaint();
+	}
+	public void actionPerformed(ActionEvent ae) 
+	{
+		str="Thank you for Registration "+jt.getText(); 
+		showStatus(str);
+		repaint();
+	}
+}
