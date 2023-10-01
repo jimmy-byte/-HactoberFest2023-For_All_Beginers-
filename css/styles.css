@@ -1,0 +1,129 @@
+body {
+font-family: 'Montserrat', sans-serif;
+}
+
+#title {
+background-color: #ff4c68;
+color: white;
+}
+
+.navbar-brand {
+font-size: 2.5rem;
+font-weight: bold;
+}
+
+.nav-link {
+font-size: 1.2rem;
+}
+
+.heading {
+font-size: 3rem;
+margin-top: 15%;
+}
+
+.Download-btn {
+margin: 5% 2% 5% 0;
+}
+
+.title-image {
+width: 60%;
+transform: rotate(25deg);
+margin-top: 20%;
+}
+
+#features {
+background-color: #fff;
+color: #ff4c68;
+padding: 7% 15%;
+}
+
+.feature-text {
+font-size: 2.5rem;
+font-weight: bold;
+}
+
+.middle-icon {
+font-size: 3.5rem;
+color: #ff4c68;
+}
+
+.card-body {
+color: #000;
+}
+
+.middle-p {
+font-size: 1.2rem;
+}
+
+#testimonials {
+background-color: #ff4c68;
+color: white;
+padding: 7% 15%;
+}
+
+.Testimonial-text {
+font-size: 2rem;
+}
+
+.Testimonial-image {
+border-radius: 50%;
+width: 15%;
+}
+
+#press {
+background-color: #fff;
+padding: 7% 15%;
+}
+
+.press-img {
+width: 15%;
+margin: 2% 2%;
+}
+
+#pricing {
+background-color: #ff4c68;
+color: white;
+padding: 7% 15%;
+}
+
+.Doggy {
+font-size: 2.5rem;
+font-weight: bold;
+}
+
+.card {
+border: none;
+}
+
+.card-btn {
+font-size: 1.2rem;
+}
+
+#cta {
+background-color: #fff;
+padding: 7% 15%;
+}
+
+.cta-text {
+font-size: 2.5rem;
+font-weight: bold;
+}
+
+.cta-button {
+margin: 5% 2% 5% 0;
+}
+
+#footer {
+background-color: #ff4c68;
+color: white;
+padding: 1% 15%;
+}
+
+.ff {
+margin: 1% 1%;
+font-size: 2rem;
+}
+
+.Copyright-text {
+font-size: 1.2rem;
+}
