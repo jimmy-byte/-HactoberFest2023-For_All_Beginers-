@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Rockets</title>
+    <!-- Tailwind CSS CDN Link -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome CDN Link -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <style>
+        /* Custom Color Scheme */
+        :root {
+            --primary-bg: #1a1a1a;
+            --primary-text: #ffffff;
+            --secondary-bg: #00274c;
+            --secondary-text: #ffcc00;
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--primary-text);
+        }
+
+        .text-secondary {
+            color: var(--secondary-text);
+        }
+
+        /* Improved Text Alignment */
+        .centered-text {
+            text-align: center;
+        }
+
+        /* Add your custom styles here */
+        @keyframes rocketIdleAnimation {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="font-sans">
+
+    <!-- Header Section -->
+    <header class="bg-secondary-bg text-secondary py-8">
+        <div class="container mx-auto">
+            <div class="text-center">
+                <h1 class="text-4xl font-bold">Welcome to Awesome Rockets</h1>
+                <p class="mt-2 text-lg">Explore the Skies with Style</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <section class="py-16">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <!-- Left Column (Text) -->
+                <div class="ml-6">
+                    <h2 class="text-3xl font-semibold mb-4">Our Mission</h2>
+                    <p class="text-gray-300 leading-7">Join us on a journey to the stars. Experience the thrill of space
+                        exploration, discover new horizons, and embrace the future.</p>
+                    <p class="mt-6 text-gray-300 leading-7">At Awesome Rockets, we're passionate about innovation and
+                        discovery. We believe that the sky is not the limit; it's just the beginning.</p>
+                    <a href="#"
+                        class="mt-8 inline-block px-6 py-3 border-red bg-secondary-bg text-secondary font-semibold rounded hover:bg-secondary-text hover:text-primary-bg transition duration-300">Learn
+                        More</a>
+                </div>
+                <!-- Right Column (Icon) -->
+                <div class="text-center transform scale-125 hover:scale-150 transition-transform">
+                    <i class="fas fa-rocket text-6xl text-secondary animate-pulse hover:animate-none"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-secondary-bg text-secondary py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 Awesome Rockets. All rights reserved.</p>
+            <div class="mt-4">
+                <a href="https://github.com/suryanshsingh2001"
+                    class="text-primary-text hover:text-primary-bg transition-colors duration-300">
+                    <i class="fab fa-github text-4xl mr-2 transition-transform hover:scale-110"></i>GitHub
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
