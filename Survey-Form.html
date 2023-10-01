@@ -10,45 +10,77 @@
 <!-- We can give absolute url, or relative url like /nextpage.jsp, and specify POST or GET method -->
 <form action="http://google.co.in">
 <!-- If we remove this, every thing will move to the left of the page-->
-<div align="center">
-<!--Adds a heading to the form-->
-<h1>Employee Interests Survey form</h1>
-Enter your name:
-<!-- Input type text for small texts, specify size -->
-<input type="text" name="UserName" size=35 maxlength=35 value="">
-<!--Adds spaces - remove and see what happens -->
-</br></br>
-Enter your department:
-<input type="text" name="Deptt" size=35 maxlength=35 value=""> </br> </br>
-Tell us a little about yourself:
-<!-- For writing lot of text like descriptions with text wrapping,
-if you dont want text wrapping, you can add wrap = "off" (horizontal scrollbar -->
-<textarea name="Comments" cols=30 rows=4></textarea> </br> </br>
-Do you exercise at home?
-<!-- Radio buttons help you choose one out of the many values -->
-<input type="radio" name="exe" value=1>Yes
-<input type="radio" name="exe" value=2>No
-</p>
-How do you like to read about your favorite topics?
-<p>
-<!--Checkbox lets you select multiple options -->
-<input type="checkbox" name="Books">Books
-<input type="checkbox" name="Web">Online resources
-<input type="checkbox" name="Phone">Phone apps
-<input type="checkbox" name="Magazines">Magazines
-</p>
-What genre of movies do you like?
-<!--Select box lets you choose one of the multiple dropdown options-->
-<select name="moviepref" ><option>
-<option value=1 selected = "true">comedy
-<option value=2 >romance
-<option value=3 >thriller
-<option value=4 >horror
-<option value=5 >biopic
-</select>
-</br></br>
-<!--submits the information entered in the form by the user -->
-<input type=submit value="Submit form">
+<div>
+
+<fieldset>
+	<legend><h2>Employee interest survey form</h2></legend> 
+	<label for="name">Enter your name:</label>
+	<!-- Input type text for small texts, specify size -->
+	<input type="text" name="UserName" size=35 maxlength=35 value="">
+	<!--Adds spaces - remove and see what happens -->
+	</br></br>
+	<label for="DateOfBirth">Date of Birth:</label>
+	<input type="date" id="DateOfBirth" name="DateOfBirth">
+	</br></br>
+
+	<label for="Department">Select your department:</label>
+	<select name="Department" id="Department">
+	    <option value="HR">Human Resources</option>
+	    <option value="IT">Information Technology</option>
+	    <option value="Finance">Finance</option>
+    	<!-- Add more department options as needed -->
+	</select>
+	<br><br>
+
+	<p>Which topics are you interested in? (Select all that apply)</p>
+	<input type="checkbox" name="Interest" value="Technology"> Technology<br>
+	<input type="checkbox" name="Interest" value="Science"> Science<br>
+	<input type="checkbox" name="Interest" value="Health"> Health<br>
+	<!-- Add more options as needed -->
+	<br><br>
+
+
+	<label for="describe">Tell us a little about yourself:</label>
+	<!-- For writing lot of text like descriptions with text wrapping,
+	if you dont want text wrapping, you can add wrap = "off" (horizontal scrollbar -->
+	<textarea name="Comments" cols=30 rows=4></textarea> </br> </br>
+	
+	<p>Do you exercise at home?</p>
+<input type="radio" name="exe" value="Yes" id="yesRadio">
+<label for="yesRadio">Yes</label>
+<input type="radio" name="exe" value="No" id="noRadio">
+<label for="noRadio">No</label>
+
+<div id="exerciseDetails" style="display:none;">
+    <p>How often do you exercise?</p>
+    <input type="text" name="ExerciseFrequency">
+</div>
+
+<script>
+document.querySelector('input[name="exe"]').addEventListener('change', function() {
+    var exerciseDetails = document.getElementById('exerciseDetails');
+    if (this.value === 'Yes') {
+        exerciseDetails.style.display = 'block';
+    } else {
+        exerciseDetails.style.display = 'none';
+    }
+  });
+</script>
+
+	<br><br>
+	<label for="genre">What genre of movies do you like?</label>
+	<!--Select box lets you choose one of the multiple dropdown options-->
+	<select name="moviepref" ><option>
+	<option value=1 selected = "true">comedy
+	<option value=2 >romance
+	<option value=3 >thriller
+	<option value=4 >horror
+	<option value=5 >biopic
+	</select>
+	</br></br>
+	<!--submits the information entered in the form by the user -->
+	<input type=submit value="Submit form">
+</fieldset>
 </div>
 </form>
 </body>
