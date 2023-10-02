@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Bio</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        .bio-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <div class="bio-container">
+        <h1>User Bio </h1>
+        <p contenteditable="true">Enter your bio here...</p>
+    </div>
+</body>
+<footer>
+    <marquee> Generate your Bio Now 🔥 </marquee>
+</footer>
+</html>
