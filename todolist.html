@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OpenToDo</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.input-container {
+    text-align: center;
+    margin: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 60%;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f4f4f4;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <h1>OpenToDo</h1>
+    <div class="input-container">
+        <input type="text" id="task" placeholder="Add a new task">
+        <button id="add-task">Add</button>
+    </div>
+    <ul id="task-list"></ul>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const taskInput = document.getElementById('task');
+    const addTaskButton = document.getElementById('add-task');
+    const taskList = document.getElementById('task-list');
+
+    addTaskButton.addEventListener('click', function() {
+        const taskText = taskInput.value.trim();
+
+        if (taskText !== '') {
+            const taskItem = document.createElement('li');
+            taskItem.innerHTML = `
+                <span>${taskText}</span>
+                <button class="delete-button">Delete</button>
+            `;
+
+            taskList.appendChild(taskItem);
+
+            taskInput.value = '';
+
+            const deleteButton = taskItem.querySelector('.delete-button');
+            deleteButton.addEventListener('click', function() {
+                taskList.removeChild(taskItem);
+            });
+        }
+    });
+});
+
+    </script>
+</body>
+</html>
