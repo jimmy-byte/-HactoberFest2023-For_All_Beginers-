@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/R_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8B00BCD4">
+
+    <GridLayout
+        android:id="@+id/grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rowCount="3"
+        android:columnCount="3"
+        android:layout_centerInParent="true">
+
+        <Button
+            android:id="@+id/btn1"
+            android:onClick="click"
+            android:layout_height="70dp"
+            android:layout_width="70dp"
+            android:backgroundTint="@color/white"
+            android:textSize="40sp"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:onClick="click"
+            android:id="@+id/btn2"
+            android:textSize="40sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_height="70dp"
+            android:layout_width="70dp"
+            android:backgroundTint="@color/white"/>
+
+        <Button
+            android:onClick="click"
+            android:id="@+id/btn3"
+            android:layout_height="70dp"
+            android:layout_width="70dp"
+            android:backgroundTint="@color/white"
+            android:textSize="40sp"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:onClick="click"
+            android:id="@+id/btn4"
+            android:layout_height="70dp"
+            android:layout_width="70dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="40sp"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_height="70dp"
+            android:layout_width="70dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:onClick="click"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="40sp"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:onClick="click"
+            android:id="@+id/btn6"
+            android:layout_height="70dp"
+            android:layout_width="70dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="40sp"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:onClick="click"
+            android:id="@+id/btn7"
+            android:layout_height="70dp"
+            android:layout_width="70dp"
+            android:backgroundTint="@color/white"
+            android:textSize="40sp"
+            android:textColor="@color/black"/>
+
+
+        <Button
+            android:onClick="click"
+            android:id="@+id/btn8"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_height="70dp"
+            android:layout_width="70dp"
+            android:backgroundTint="@color/white"
+            android:textSize="40sp"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:onClick="click"
+            android:id="@+id/btn9"
+            android:layout_height="70dp"
+            android:layout_width="70dp"
+            android:backgroundTint="@color/white"
+            android:textSize="40sp"
+            android:textColor="@color/black"/>
+
+    </GridLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/newGame"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:text="new game"
+        android:textSize="25sp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:onClick="reStart"
+        android:layout_marginBottom="10dp"/>
+
+</RelativeLayout>
+
