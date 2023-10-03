@@ -8,7 +8,7 @@ struct node
 	struct node *next;         //self referential structure
 }*head; //global pointer contains address of first node
 typedef struct node node;
-void addbeg(int num)    //1
+void addbeg(int num)    
 {
    node *newnode;
    newnode=(node*)malloc(sizeof(node));
@@ -97,7 +97,7 @@ void search()
     {
      	if(cur->data==num)
      		{
-             	printf("Element found %d",num);
+          printf("Element found %d",num);
      			return;
 		    }
 		cur=cur->next; //increment
@@ -116,7 +116,7 @@ void delnode(int num)  //delete the nodes
    			head=cur->next;
    			free(cur);
    			printf("Element deleted\n");
-   	        return;
+   	    return;
 		   }
 		else
 		{
@@ -204,15 +204,15 @@ int main()
 			        if(loc<1 || (loc>c()+1))
 			             printf("\n Invalid loc!");
 			        else
-					{
-						printf("Enter the number");
+				   	{
+						       printf("Enter the number");
 			            scanf("%d",&num);
 			            if(loc==1)
 			            	  addbeg(num);
-					    else if (loc ==c()+1)
-					         append(num);
-					    else
-					        addbet(loc,num);       
+					        else if (loc ==c()+1)
+					            append(num);
+					         else
+					            addbet(loc,num);       
 			     	}
 			    }
 		    case 4: { k=c();
