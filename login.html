@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <title>Javascript Login Form Validation</title>
@@ -18,7 +19,29 @@
 <input type="button" value="Login" id="submit" onclick="validate()"/>
 </form>
 <span><b class="note">Note : </b>For this demo use following username and password. <br/><b class="valid">User Name : Formget<br/>Password : formget#123</b></span>
+
+<!-- Success message container -->
+<div id="success-message" style="display: none; color: green;">
+    Successfully logged in!
 </div>
 </div>
+</div>
+<script>
+function validate() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    // Check if username and password are correct (you can add your validation logic here)
+    if (username === "Formget" && password === "formget#123") {
+        // Hide the login form
+        document.getElementById("form_id").style.display = "none";
+        // Show the success message
+        document.getElementById("success-message").style.display = "block";
+    } else {
+        // Display an error message (you can add your error handling logic here)
+        alert("Invalid username or password. Please try again.");
+    }
+}
+</script>
 </body>
 </html>
