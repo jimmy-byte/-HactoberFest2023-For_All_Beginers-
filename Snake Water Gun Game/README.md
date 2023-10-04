@@ -15,4 +15,4 @@ This is a "Snake Water Gun" game built using Bootstrap and JavaScript. The game 
 Bootstrap, javascript
 
 ## Demo
-You can play the "Snake Water Gun" game here ('''https://ankitjha2023.github.io/snake-water-gun''')
+You can play the "Snake Water Gun" game here ('''https://snake-water-gun-23.netlify.app/''')
