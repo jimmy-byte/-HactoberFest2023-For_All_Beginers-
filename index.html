@@ -10,6 +10,40 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="css/styles.css">
 
+  <style>
+    
+    .card-btn {
+      background-color: #343a40; /* Default button background color */
+      color: white; /* Default button text color */
+      transition: background-color 0.3s ease, color 0.3s ease; /* Transition effect for smooth color change */
+    }
+  
+    .card-btn:hover {
+      background-color: #007bff; /* Background color on hover */
+      color: white; /* Text color on hover */
+    }
+    {% comment %} .card {
+      border: none;
+      margin-bottom: 20px; /* Add margin to separate cards */
+    } {% endcomment %}
+  
+  
+    {% comment %} .card-header {
+      background-color: #343a40; /* Header background color */
+      color: white; /* Header text color */
+      height: 50px; /* Set a fixed height for the card header */
+    } {% endcomment %}
+
+    {% comment %} .card-body {
+      padding: 20px;
+    } {% endcomment %}
+
+    {% comment %} .card-btn {
+      width: 100%;
+      height: 40px; /* Set a fixed height for the button */
+      vertical-align: top; /* Align the button to the top of the card */
+    } {% endcomment %}
+  </style>
 
 </head>
 
@@ -157,7 +191,7 @@
             </div>
           </div>
         </div>
-        <div class="card-col col-lg-4 col-md-12">
+        <div class="card-col col-lg-4 col-md-6">
           <div class="card">
             <div class="card-header Doggy">
               <h3 class="Doggy-name">Mastiff</h3>
