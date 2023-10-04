@@ -1,6 +1,6 @@
 
 
-<h1 align="center"> HactoberFest2020-For_All_Beginers </h1>
+<h1 align="center"> HacktoberFest2023-For_All_Beginners </h1>
 
 ***
 
@@ -14,22 +14,22 @@
 
 ## HacktoberFest Rules :
 
-To earn your Hacktoberfest tee or tree reward, you must register and make four valid pull requests (PRs) between October 1-31 (in any time zone). PRs can be made to any public repo on GitHub, not only the ones with issues labeled Hacktoberfest. If a maintainer reports your pull request as spam or behavior not in line with the project’s code of conduct, you will be ineligible to participate. This year, the first 70,000 participants who successfully complete the challenge will be eligible to receive a prize.
+<b>This year marks the 10th anniversary of Hacktoberfest, and we’re calling on your support! </b>
+<br>
+
+To earn your Hacktoberfest tree reward, you must register and make four valid pull requests (PRs) between October 1-31 (in any time zone). Pull requests can be made in any GitHub or GitLab-hosted project participating in Hacktoberfest (look for the “hacktoberfest” topic). If a maintainer reports your pull request as spam or behaviour, not in line with the project’s code of conduct, you will be ineligible to participate. The first 50,000 participants to have their first PR/MR accepted will have a tree planted in their name through Tree Nation.
+***
+
+
+This year marks the 10th anniversary of Hacktoberfest, and we’re calling on your support! Whether it’s your first time participating—or your tenth—it’s almost time to hack out four pristine pull/merge requests as we continue our month of support for open source.
+
+***
+<h3 align="center"> Whether it’s your first or fiftieth pull request, there’s always more to learn! We’ve compiled a few resources to help you create quality pull requests, keep your repositories pristine, and build on your open-source knowledge. </h3>
+
 ***
 
 <h3 align="center">
-    <a href="https://hacktoberfest.digitalocean.com/">
-        Link To HacktoberFest 2020
-    </a>
-</h3>
-
-***
-<h3 align="center"> Whether it’s your first or fiftieth pull request, there’s always more to learn! We’ve put together a few resources that can help you create quality pull requests, keep your repositories pristine, and build on your open source knowledge. </h3>
-
-***
-
-<h3 align="center">
-    <a href="https://discord.com/invite/hacktoberfest/">
+    <a href="https://discord.com/invite/hacktoberfest">
        Join Discord Conversation
     </a>
 </h3>
