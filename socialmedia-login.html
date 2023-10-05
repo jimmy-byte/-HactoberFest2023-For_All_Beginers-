@@ -1,44 +1,162 @@
-<div class="container">
-  <form action="/action_page.php">
-    <div class="row">
-      <h2 style="text-align:center">Login page with social media</h2>
-      <div class="vl">
-        <span class="vl-innertext">or</span>
-      </div>
+<!DOCTYPE html>
+<html>
+<style>
+  body {
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+    overflow-x: hidden;
+  }
 
-      <div class="col">
-        <a href="#" class="fb btn">
-          <i class="fa fa-facebook fa-fw"></i> Login with Facebook
-        </a>
-        <a href="#" class="twitter btn">
-          <i class="fa fa-twitter fa-fw"></i> Login with Twitter
-        </a>
-        <a href="#" class="google btn">
-          <i class="fa fa-google fa-fw"></i> Login with Google+
-        </a>
-      </div>
+  div {
+    padding: 10px 0;
+    margin: 20px 160px;
+  }
 
-      <div class="col">
-        <div class="hide-md-lg">
-          <p>Or sign in manually:</p>
+  .container {
+    background-color: #d3d2d9;
+    padding: 50px;
+    margin: 25px 20px;
+    border: 2px dashed blue;
+  }
+
+  hr {
+    border: 2px solid black;
+    width: 50%;
+  }
+
+  #fbbtn {
+
+    width: 40px;
+    height: 40px;
+  }
+
+  #twitbtn {
+    width: 40px;
+    height: 40px;
+  }
+
+  #ggl {
+    width: 40px;
+    height: 40px;
+  }
+
+  #lginbtn {
+    border-radius: 5px;
+    padding: 3px 25px;
+    margin: 11px;
+    width: 20%;
+    box-shadow: 0 1.5px 0;
+    text-align: center;
+  }
+
+  #lginbtn:hover {
+    background-color: #b0afac;
+    opacity: 5px;
+    cursor: pointer;
+
+  }
+
+  #usename:hover {
+    height: 15px;
+    background-color: #edbaab;
+    font-size: .8rem;
+
+  }
+
+  #pass:hover {
+    background-color: #edbaab;
+    font-size: .8rem;
+  }
+
+  .mainbox {
+    border: 4px solid gold;
+    border-radius: 4px;
+    justify-self: center;
+    background-color: burlywood;
+  }
+
+  h2 span {
+    border: 2px dashed blueviolet;
+    width: auto;
+    background-color: #abaab3;
+    font-size: larger;
+  }
+
+  h2 span1 {
+    font-size: larger;
+  }
+
+  h2 span2 {
+    border: 2px solid blueviolet;
+    background-color: #abaab3;
+    font-size: 1.8rem;
+  }
+
+  label1 span3 {
+    font-size: 1.5rem;
+  }
+
+  label2 span4 {
+    font-size: 1.5rem;
+  }
+</style>
+
+<body>
+
+  <div class="container">
+    <center>
+      <h1>Login Page</h1>
+    </center>
+    <hr>
+    <form action="/action_page.php">
+      <div class="mainbox">
+        <div class="Social">
+          <h2><span><i>Login with Social media</i></span></h2>
+
+          <div class="col">
+            <img src="fbbutton.jpg" id="fbbtn">
+            <a href="#" class="fbbtn"><b>Sign in with Facebook</b></a>
+            <br><br>
+            <img src="twittter.jpg" alt="" id="twitbtn">
+            <a href="#" class="twitterbtn"> <b>Sign in with Twitter</b></a>
+            <br><br>
+            <img src="google.png" alt="" id="ggl">
+            <a href="#" class="google btn"><b>Sign in with Google</b></a>
+            <br><br>
+          </div>
+
+          <div>
+            or
+            <div class="Manually">
+              <h2>
+                <span1><i>Sign in:</i></span1>
+              </h2>
+              <h2>
+                <span2><i>Manually</i></span2>
+              </h2>
+            </div>
+            <label1>
+              <span3>Username</span3>
+            </label1><br>
+            <i class="login__icon fas fa-user"></i>
+            <input type="text" name="username" placeholder="Username/E-mail" required id="usename">
+            <br><br>
+            <label2>
+              <span4>Password</span4>
+            </label2><br>
+            <input type="password" name="password" placeholder="Password" required id="pass">
+            <br><br>
+            <input type="submit" value="Login" id="lginbtn">
+            <br><br>
+            <a href="#" class="btn">Sign up</a>
+            <br><br>
+            <a href="#" class="btn">Forgot password?</a>
+          </div>
         </div>
-
-        <input type="text" name="username" placeholder="Username" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <input type="submit" value="Login">
       </div>
-
-    </div>
-  </form>
-</div>
-
-<div class="bottom-container">
-  <div class="row">
-    <div class="col">
-      <a href="#" style="color:white" class="btn">Sign up</a>
-    </div>
-    <div class="col">
-      <a href="#" style="color:white" class="btn">Forgot password?</a>
-    </div>
+    </form>
   </div>
-</div>
+</body>
+
+</html>
