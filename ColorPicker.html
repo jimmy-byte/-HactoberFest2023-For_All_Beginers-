@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Color Picker Example</title>
+</head>
+<body>
+    <h1>Color Picker Example</h1>
+    
+    <label for="colorPicker">Select a color:</label>
+    <input type="color" id="colorPicker" name="colorPicker" value="#FF0000">
+    
+    <div>
+        <p>You selected the color:</p>
+        <div id="selectedColor" style="width: 100px; height: 50px;"></div>
+    </div>
+
+    <script>
+        // Get references to the color picker and the color display element
+        const colorPicker = document.getElementById("colorPicker");
+        const selectedColor = document.getElementById("selectedColor");
+
+        // Add an event listener to the color picker input
+        colorPicker.addEventListener("input", (event) => {
+            // Get the selected color from the input
+            const selectedValue = event.target.value;
+            
+            // Update the background color of the display element
+            selectedColor.style.backgroundColor = selectedValue;
+        });
+    </script>
+</body>
+</html>
