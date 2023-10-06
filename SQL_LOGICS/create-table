@@ -1,0 +1,8 @@
+CREATE TABLE Person (
+    ID INT PRIMARY KEY AUTO_INCREMENT,
+    Name VARCHAR(255) NOT NULL,
+    Age INT,
+    Address VARCHAR(255),
+    PhoneNumber VARCHAR(15),
+    Pincode VARCHAR(10)
+);
