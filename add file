@@ -1,0 +1,63 @@
+const { Octokit } = require("octokit");
+
+// GitHub API token (replace with your own)
+const token = "YOUR_GITHUB_TOKEN";
+
+// Repository information
+const owner = "repository_owner";
+const repo = "repository_name";
+
+// File content
+const fileContent = `This is the content of the new file.\nYou can add more text here.`;
+
+// Initialize Octokit with your GitHub token
+const octokit = new Octokit({ auth: token });
+
+// Create a new file in the repository
+async function createFile(filename, branch, content) {
+  try {
+    const response = await octokit.rest.repos.createOrUpdateFileContents({
+      owner,
+      repo,
+      path: filename,
+      message: `Add ${filename}`,
+      content: Buffer.from(content).toString("base64"),
+      branch,
+    });
+
+    console.log(`File '${filename}' created successfully.`);
+  } catch (error) {
+    console.error(`Error creating file '${filename}':`);
+    console.error(error);
+  }
+}
+
+// Create a pull request to merge the new file
+async function createPullRequest(title, body, baseBranch, headBranch) {
+  try {
+    const response = await octokit.rest.pulls.create({
+      owner,
+      repo,
+      title,
+      body,
+      base: baseBranch,
+      head: `${owner}:${headBranch}`,
+    });
+
+    console.log("Pull request created successfully.");
+  } catch (error) {
+    console.error("Error creating pull request:");
+    console.error(error);
+  }
+}
+
+// Usage
+const filename = "new_file.txt";
+const branch = "feature-branch";
+const title = "Add new file";
+const body = "This pull request adds a new file to the repository.";
+const baseBranch = "main";
+const headBranch = "feature-branch";
+
+createFile(filename, branch, fileContent)
+  .then(() => createPullRequest(title, body, baseBranch, headBranch));
