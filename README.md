@@ -1,6 +1,6 @@
 
 
-<h1 align="center"> HactoberFest2020-For_All_Beginers </h1>
+<h1 align="center"> Hacktoberfest-2023 for all Beginner's </h1>
 
 ***
 
@@ -10,16 +10,16 @@
 
 - Hacktoberfest is a celebration open to everyone in our global community.
 - Pull requests can be made in any GitHub-hosted repositories/projects.
-- You can sign up anytime between October 1 and October 31.
+- You can sign up anytime between October 1 to October 31.
 
-## HacktoberFest Rules :
+## Hacktoberfest Rules :
 
-To earn your Hacktoberfest tee or tree reward, you must register and make four valid pull requests (PRs) between October 1-31 (in any time zone). PRs can be made to any public repo on GitHub, not only the ones with issues labeled Hacktoberfest. If a maintainer reports your pull request as spam or behavior not in line with the project’s code of conduct, you will be ineligible to participate. This year, the first 70,000 participants who successfully complete the challenge will be eligible to receive a prize.
+Pull requests can be made in any GitHub or GitLab hosted project that’s participating in Hacktoberfest (look for the “hacktoberfest” topic). Project maintainers must accept your pull/merge requests for them to count toward your total. The first 50,000 participants to have their first PR/MR accepted will have a tree planted in their name through Tree Nation. Participants with four pull/merge requests accepted between October 1 and October 31 will receive a unique digital reward.
 ***
 
 <h3 align="center">
     <a href="https://hacktoberfest.digitalocean.com/">
-        Link To HacktoberFest 2020
+        Link To HacktoberFest 2023
     </a>
 </h3>
 
@@ -35,22 +35,25 @@ To earn your Hacktoberfest tee or tree reward, you must register and make four v
 </h3>
 
 ***
-## Rules To Contribute To This Repo
+## Rules to contribute to this repository 
 
 -   Use any language.
--   C, C++, JAVA, Data Structure and Algorithms, HTML, CSS.
+-   C, C++, JAVA, Python, Data Structure and Algorithms, HTML, CSS.
 -   Anything valuable.
 
-## Steps For Contribution
+## Steps for contribution
 
-    1. Fork this repo
-    2. Star this repo
-    3. Add a file
-    4. commit the code
-    5. Make pull request
+    1. Fork this repository 
+    2. Star this repository 
+    3. Clone your forked repository to your local machine.
+    4. Create a new branch: git checkout -b my-contribution
+    5. Make your changes and commit them: git commit -m "Add your message here"
+    6. Push to your branch: git push origin my-contribution
+    7. Create a Pull Request (PR) from your forked repository to this repository.
+
 ***
 <h2 align="center">
     <p>
-        Thank You
+        Thank you for Contributing in the Hacktoberfest-2023. 
     </p>
 </h2>
