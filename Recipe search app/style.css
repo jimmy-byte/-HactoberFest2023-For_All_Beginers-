@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    border-radius: 25px;
 }
 img{
     width: 100%;
@@ -21,7 +22,7 @@ section{
     align-items: center;
     justify-content: center;
     padding: 100px 0;
-    background-color: rgb(26, 26, 27);
+    background-color: #ffc3cc;
 }
 .container{
     width: 90%;
@@ -32,21 +33,24 @@ section{
 .brand{
     text-align: center;
     font-size: 4rem;
-    color: whitesmoke;
+    color: #404041;
+    background-color: #78e9dd;
+    border-radius: 25px;
     margin-bottom: 30px;
 }
 form{
     width: 90%;
     max-width: 400px;
     margin: 20px auto;
-    background-color: rgb(223, 223,223);
-    border-radius: 15px;
+    background-color: #78e9dd;
+    border-radius: 25px;
 }
 form input{
     width: 90%;
-    background-color: transparent;
+    background-color: #78e9dd;
     padding: 10px;
-   display: inline-block;
+    display: inline-block;
+    border-radius: 25px;
     border: none;
     outline: none;
     font-size: 2rem;
@@ -58,7 +62,7 @@ form ion-icon{
     margin: -9px;
     color: rgb(75, 75, 75);
 }
-.serarch-result{
+.search-result{
     margin-top: 50px;
     width: 100%;
     display: grid;
@@ -69,9 +73,10 @@ form ion-icon{
 .item{
     width: 100%;
     border-radius: 8px;
-    background-color: rgb(37, 37, 37);
+    background-color: #78e9dd;
     padding: 15px;
     overflow: hidden;
+    border-radius: 20px;
 }
 .item img{
     width: 100%;
@@ -85,7 +90,7 @@ form ion-icon{
     justify-content: space-between;
 }
 .item .title{
-    color: whitesmoke;
+    color: #404041;
     margin: 20px 10px 0 0;
     font-size: 1.8rem;
     font-weight: 400;
@@ -97,6 +102,7 @@ form ion-icon{
     width: 130px;
     padding: 10px 0;
     background-color: #404041;
+    text-decoration: underline;
     color: white;
     font-size: 1.4rem;
     margin-top: 20px;
@@ -109,7 +115,7 @@ form ion-icon{
     background-color: rgb(119, 117, 117);
 }
 .item-data{
-    color: whitesmoke;
+    color: #404041;
     display: block;
     margin-top: 10px;
     font-size: 1.4rem;
