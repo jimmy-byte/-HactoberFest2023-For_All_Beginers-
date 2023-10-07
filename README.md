@@ -41,7 +41,7 @@ Pull requests can be made in any GitHub or GitLab hosted project that’s partic
 -   C, C++, JAVA, Python, Data Structure and Algorithms, HTML, CSS.
 -   Anything valuable.
 
-## Steps For Contribution
+## Steps for contribution
 
     1. Fork this repository 
     2. Star this repository 
@@ -54,6 +54,6 @@ Pull requests can be made in any GitHub or GitLab hosted project that’s partic
 ***
 <h2 align="center">
     <p>
-        Thank You for Contributing in the Hacktoberfest-2023. 
+        Thank you for Contributing in the Hacktoberfest-2023. 
     </p>
 </h2>
