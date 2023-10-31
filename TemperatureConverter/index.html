@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://imgs.search.brave.com/t-6XJicDgbDOwdrKxY1I85tCiHWrIBp4ZNSvijaKLSA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuZHJ5aWNvbnMu/Y29tL3VwbG9hZHMv/aWNvbi9wcmV2aWV3/Lzk1OTEvc21hbGxf/MXhfNWMyNTFjYjIt/MmRjMi00YTNiLWJh/NzAtZDVhODI4NjI1/ZTNhLnBuZw" type="image/x-icon">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script >
+        function convertTemperature() {
+  const tempInput = document.getElementById('tempInput').value;
+  const fromUnit = document.getElementById('fromUnit').value;
+  const toUnit = document.getElementById('toUnit').value;
+  let result;
+
+  if (fromUnit === 'celsius') {
+    if (toUnit === 'fahrenheit') {
+      result = (tempInput * 9) / 5 + 32;
+    } else if (toUnit === 'kelvin') {
+      result = parseFloat(tempInput) + 273.15;
+    } else {
+      result = tempInput; // No conversion needed (from Celsius to Celsius)
+    }
+  } else if (fromUnit === 'fahrenheit') {
+    if (toUnit === 'celsius') {
+      result = ((tempInput - 32) * 5) / 9;
+    } else if (toUnit === 'kelvin') {
+      result = ((tempInput - 32) * 5) / 9 + 273.15;
+    } else {
+      result = tempInput; // No conversion needed (from Fahrenheit to Fahrenheit)
+    }
+  } else if (fromUnit === 'kelvin') {
+    if (toUnit === 'celsius') {
+      result = tempInput - 273.15;
+    } else if (toUnit === 'fahrenheit') {
+      result = ((tempInput - 273.15) * 9) / 5 + 32;
+    } else {
+      result = tempInput; // No conversion needed (from Kelvin to Kelvin)
+    }
+  }
+
+  document.getElementById('result').innerHTML = `Result: ${result.toFixed(
+    2
+  )} ${toUnit}`;
+}
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+        <label for="tempInput" class="label">Enter Temperature:</label>
+        <input type="number" id="tempInput" placeholder="Enter temperature">
+        <select id="fromUnit">
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+        </select>
+        <span>to</span>
+        <select id="toUnit">
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="celsius">Celsius</option>
+            <option value="kelvin">Kelvin</option>
+        </select>
+        <br>
+        <button class="btn" onclick="convertTemperature()">Convert</button>
+        <p id="result"></p>
+    </div>
+</body>
+</html>
